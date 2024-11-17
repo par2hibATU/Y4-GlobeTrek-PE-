@@ -5,7 +5,8 @@ import Navbar from '../../components/header/Header';
 
 export const List = () => {
   return (
-    <div><Navbar/> <Header/></div>
+    <div><Navbar/> 
+    <Header type="list"/></div>
   )
 }
 
