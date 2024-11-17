@@ -8,6 +8,9 @@ export const Home = () => {
     <div>
         <Navbar />
         <Header />
+        <div className="homeContainer">
+          
+        </div>
     </div>
   )
 }

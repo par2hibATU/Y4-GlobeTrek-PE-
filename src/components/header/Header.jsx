@@ -41,9 +41,11 @@ export const Header = ({ type }) => {
       };
     });
   };
+  
+  ///If div is list, then headerContainer listMode will be triggered otherwise headerContainer will be triggered */
   return (
     <div className="header">
-      <div className="headerContainer">
+      <div className={type ==="list" ? "headerContainer listMode" : "headerContainer"}>
         <div className="headerList">
           <div className="headerListItem active">
             <FontAwesomeIcon icon={faBed} />
