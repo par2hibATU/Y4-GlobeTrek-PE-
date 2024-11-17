@@ -117,3 +117,7 @@
     cursor: pointer;
     background-color: white;
 }
+
+.optionCounterButton:disabled{
+    cursor: no-drop;
+}
