@@ -87,6 +87,7 @@
 .date{
     position: absolute;
     top: 52px;
+    z-index: 2;
 }
 
 .options{
@@ -98,6 +99,7 @@
     /*box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;*/
 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 2;
  
 }
 

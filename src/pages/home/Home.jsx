@@ -12,6 +12,7 @@ export const Home = () => {
         <div className="homeContainer">
           <Featured />
         </div>
+        <h1 className="homeTitle">Browse by property type</h1>
     </div>
   )
 }
