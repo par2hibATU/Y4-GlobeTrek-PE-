@@ -4,12 +4,18 @@
     display: flex;
     justify-content: center;
     position: relative;
+    margin-top: 50px;
 }
 
 .headerContainer{
     width: 100%;
     max-width: 1024px;
     margin: 20px 0px 100px 0px;
+}
+
+.headerContainer.listMode{
+    margin: 20px 0px 0px 0px;
+
 }
 
 .headerList{
@@ -81,4 +87,45 @@
 .date{
     position: absolute;
     top: 52px;
+    z-index: 2;
+}
+
+.options{
+    position: absolute;
+    top: 53px;
+    background-color: white;
+    color: grey;
+    border-radius: 10px;
+    /*box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;*/
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 2;
+ 
+}
+
+.optionItem{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.optionCounter{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: black;
+}
+
+.optionCounterButton{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #0071c2;
+    cursor: pointer;
+    background-color: white;
+}
+
+.optionCounterButton:disabled{
+    cursor: no-drop;
 }
