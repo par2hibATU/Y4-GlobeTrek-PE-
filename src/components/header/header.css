@@ -82,3 +82,12 @@
     position: absolute;
     top: 52px;
 }
+
+.options{
+    position: absolute;
+    top: 53px;
+    background-color: white;
+    color: grey;
+    border-radius: 10px;
+
+}
