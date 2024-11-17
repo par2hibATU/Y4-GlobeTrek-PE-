@@ -3,6 +3,10 @@
     background-color: rgb(4, 180, 180);
     display: flex;
     justify-content: center;
+    position: fixed; /* Makes the navbar fixed at the top */
+    top: 0; /* Ensures it stays at the top */
+    width: 100%; /* Full-width navbar */
+    z-index: 1000; /* Places the navbar above other elements */
 }
 
 .navContainer{

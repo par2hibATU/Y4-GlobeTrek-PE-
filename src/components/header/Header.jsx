@@ -67,7 +67,7 @@ export const Header = ({ type }) => {
             <span>Airport Taxis</span>
           </div>
         </div>
-        { type !== "list" &&
+        { type !== "list" && (
           <>
             <h1 className="headerTitle">Get Discounts!</h1>
             <p className="headerDesc">
@@ -184,6 +184,7 @@ export const Header = ({ type }) => {
               </div>
             </div>
           </>
+        )
         }
       </div>
     </div>
