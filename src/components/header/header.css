@@ -1,12 +1,11 @@
+
 .header{
     background-color: rgb(4, 180, 180);
     color: white;
     display: flex;
     justify-content: center;
     position: relative;
-    margin-top: 50px;
 }
-
 .headerContainer{
     width: 100%;
     max-width: 1024px;
@@ -15,7 +14,6 @@
 
 .headerContainer.listMode{
     margin: 20px 0px 0px 0px;
-
 }
 
 .headerList{
@@ -26,7 +24,7 @@
 
 .headerListItem{
     display: flex;
-    align-items: last baseline;
+    align-items: center;
     gap: 10px;
 }
 
@@ -36,12 +34,12 @@
     border-radius: 20px;
 }
 
-.headerDesc{
+.hearderDesc{
     margin: 20px 0px;
 }
 
 .headerBtn{
-    background-color: rgb(42, 130, 184);
+    background-color: #0071c2;
     color: white;
     font-weight: 500;
     border: none;
@@ -62,6 +60,7 @@
     bottom: -25px;
     width: 100%;
     max-width: 1024px;
+
 }
 
 .headerIcon{
@@ -80,27 +79,22 @@
 }
 
 .headerSearchText{
-    color: lightsteelblue;
+    color: lightgray;
     cursor: pointer;
 }
-
 .date{
     position: absolute;
-    top: 52px;
+    top: 50px;
     z-index: 2;
 }
-
 .options{
-    position: absolute;
-    top: 53px;
-    background-color: white;
-    color: grey;
-    border-radius: 10px;
-    /*box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;*/
-
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index: 2;
- 
+    position: absolute;
+    top: 50px;
+    background-color: white;
+    color: gray;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .optionItem{
@@ -122,10 +116,11 @@
     width: 30px;
     height: 30px;
     border: 1px solid #0071c2;
+    color: #0071c2;
     cursor: pointer;
     background-color: white;
 }
 
 .optionCounterButton:disabled{
-    cursor: no-drop;
+    cursor: not-allowed;
 }
