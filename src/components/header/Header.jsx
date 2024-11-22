@@ -7,12 +7,14 @@ import {
   faPerson,
   faPlane,
   faTaxi,
+
 } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarDays } from "@fortawesome/free-regular-svg-icons";
 import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { format } from "date-fns";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export const Header = ({ type }) => {
   //to hide the calender at the opening
@@ -45,7 +47,7 @@ export const Header = ({ type }) => {
   ///If div is list, then headerContainer listMode will be triggered otherwise headerContainer will be triggered */
   return (
     <div className="header">
-      <div className={type ==="list" ? "headerContainer listMode" : "headerContainer"}>
+      <div className={type ==="list" ? "headerContainer listMode" : type === "email" ? "headerContainer emailMode" : "headerContainer"}>
         <div className="headerList">
           <div className="headerListItem active">
             <FontAwesomeIcon icon={faBed} />
@@ -68,8 +70,12 @@ export const Header = ({ type }) => {
             <FontAwesomeIcon icon={faTaxi} />
             <span>Airport Taxis</span>
           </div>
+          <div className="headerListItem">
+            <FontAwesomeIcon icon={faEnvelope} />
+            <span>Contact Us</span>
+          </div>
         </div>
-        { type !== "list" && (
+        { type !== "list" && type !== "email" &&(
           <>
             <h1 className="headerTitle">Get Discounts!</h1>
             <p className="headerDesc">
