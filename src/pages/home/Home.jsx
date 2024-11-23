@@ -5,6 +5,7 @@ import Featured from "../../components/featured/Featured";
 import PropertyList from "../../components/propertyList/PropertyList";
 import FeaturedProperties from "../../components/featuredProperties/FeaturedProperties";
 import Subscribe from "../mailList/Subscribe";
+import Footer from "../../components/footer/Footer";
 
 
 
@@ -23,6 +24,7 @@ export const Home = () => {
           <h2 className="homeTitle">Peoples Favorite</h2>
           <FeaturedProperties />
           <Subscribe />
+          <Footer />
         </div>
     </div>
   )
