@@ -8,6 +8,7 @@ export const MailList = () => {
       <Navbar />
       <Header type = "email" />
 
+
     </div>
   )
 }
