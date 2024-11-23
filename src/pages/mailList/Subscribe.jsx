@@ -7,7 +7,7 @@ export const Subscribe = () => {
         <span className="mailDesc">Sign up and we will send the best deals to you</span>
         <div className="mailInputContainer">
             <input type="text" placeholder="Your Email" />
-            <button>Subscribe</button>
+            <button >Subscribe</button>
         </div>
     </div>
   )
