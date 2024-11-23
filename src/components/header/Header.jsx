@@ -83,7 +83,7 @@ export const Header = ({ type }) => {
               points for each trip and get instant off on your favorite
               destination
             </p>
-            <button className="headerBtn">Sign in / Register</button>
+            
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />
