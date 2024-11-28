@@ -5,11 +5,33 @@
     display: flex;
     justify-content: center;
     position: relative;
+    background-image: url('./test2600.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    backdrop-filter: blur(1px); /* Optional blur */
+   
+}
+.headerContainer h1, .headerContainer p, .headerContainer a {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+
+}
+
 .headerContainer{
     width: 100%;
     max-width: 1024px;
-    margin: 20px 0px 100px 0px;
+    margin: 20px 0px 300px 0px;
+    color: white;
+    
 }
 
 .headerContainer.listMode{
