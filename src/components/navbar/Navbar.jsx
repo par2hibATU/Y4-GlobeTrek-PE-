@@ -13,13 +13,16 @@ export const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navContainer">
-        <span className="logo">GlobeTrek</span>
+        <div className="navbarTitle">
+          <span className="logo">GlobeTrek</span>
+        </div>
+
         <div className="navItems">
           <div className="navbarRegisterItems">
             <button className="navButton">Register</button>
             <button className="navButton">Login</button>
           </div>
-          
+
           <div className="navbarList">
             <div className="navbarListItem active">
               <FontAwesomeIcon icon={faBed} />
