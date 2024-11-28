@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     position: relative;
+    
     background-image: url('./test2600.png');
     background-size: cover;
     background-position: center;
