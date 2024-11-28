@@ -11,9 +11,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarDays } from "@fortawesome/free-regular-svg-icons";
 import { DateRange } from "react-date-range";
+import { format, addDays, isWeekend } from "date-fns";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
-import { format } from "date-fns";
+
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export const Header = ({ type }) => {
@@ -21,13 +22,19 @@ export const Header = ({ type }) => {
   const [openDate, setOpenDate] = useState(false);
 
   //to set the dates
-  const [date, setDate] = useState([
-    {
-      startDate: new Date(),
+  const [state, setState] = useState({
+    selection1: {
+      startDate: addDays(new Date(), -6),
       endDate: new Date(),
-      key: "selection",
+      key: "selection1",
     },
-  ]);
+    selection2: {
+      startDate: addDays(new Date(), 1),
+      endDate: addDays(new Date(), 7),
+      key: "selection2",
+    },
+  });
+
   const [openOptions, setOpenOptions] = useState(false);
   const [options, setOptions] = useState({
     adult: 1,
@@ -43,6 +50,32 @@ export const Header = ({ type }) => {
       };
     });
   };
+
+  const customDayContent = (day) => {
+    let extraDot = null;
+    if (isWeekend(day)) {
+      extraDot = (
+        <div
+          style={{
+            height: "5px",
+            width: "5px",
+            borderRadius: "100%",
+            background: "orange",
+            position: "absolute",
+            top: 2,
+            right: 2,
+          }}
+        />
+      );
+    }
+    return (
+      <div>
+        {extraDot}
+        <span>{format(day, "d")}</span>
+      </div>
+    );
+  };
+
   
   ///If div is list, then headerContainer listMode will be triggered otherwise headerContainer will be triggered */
   return (
@@ -98,18 +131,21 @@ export const Header = ({ type }) => {
                 <span
                   onClick={() => setOpenDate(!openDate)}
                   className="headerSearchText"
-                >{`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(
-                  date[0].endDate,
+                >{`${format(state.selection1.startDate, "MM/dd/yyyy")} to ${format(
+                  state.selection2.endDate,
                   "MM/dd/yyyy"
                 )}`}</span>
 
                 {openDate && (
                   <DateRange
-                    editableDateInputs={true}
-                    onChange={(item) => setDate([item.selection])}
-                    moveRangeOnFirstSelection={false}
-                    ranges={date}
-                    className="date"
+                  onChange={(item) => setState({ ...state, ...item })}
+                  showSelectionPreview={true}
+                  moveRangeOnFirstSelection={false}
+                  months={2}
+                  ranges={[state.selection1, state.selection2]}
+                  direction="horizontal"
+                  dayContentRenderer={customDayContent}
+                  className="date"
                   />
                 )}
               </div>
