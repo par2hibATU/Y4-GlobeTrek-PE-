@@ -1,9 +1,10 @@
 
 .navbar{
-    height: 50px;
+    height: 150px;
     background-color: rgb(4, 180, 180);
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .navContainer{
@@ -13,6 +14,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 auto;
+    margin: 0px 550px 30px 0px;
+    padding: 10px 20px;
 
 }
 
@@ -20,6 +24,8 @@
     font-weight: bolder;
     font-size: 2.5rem;
     color: rgb(247, 238, 238);
+    
+
 }
 
 .navButton{
@@ -31,4 +37,35 @@
     font-weight: bolder;
     border: solid 1px black;
     background-color: white;   
+    border-radius: 5px;
 }
+
+.navbarList{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.navbarListItem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 30px;
+    
+}
+.navbarRegisterItems {
+    display: flex;
+    align-items: center; 
+    margin-left: 1200px; 
+    gap: 0;
+}
+
+
+.navbarListItem.active{
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
