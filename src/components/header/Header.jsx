@@ -85,13 +85,15 @@ export const Header = ({ type }) => {
         </div>
         { type !== "list" && type !== "email" &&(
           <>
-            <h1 className="headerTitle">Get Discounts!</h1>
+          <div className="headerTexts">
+          <h1 className="headerTitle">Get Discounts!</h1>
             <p className="headerDesc">
               Get rewarded for your travels- make an account with us to get
               points for each trip and get instant off on your favorite
               destination
             </p>
-            
+          </div>
+
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />

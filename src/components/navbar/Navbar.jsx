@@ -19,7 +19,7 @@ export const Navbar = () => {
             <button className="navButton">Register</button>
             <button className="navButton">Login</button>
           </div>
-
+          
           <div className="navbarList">
             <div className="navbarListItem active">
               <FontAwesomeIcon icon={faBed} />
