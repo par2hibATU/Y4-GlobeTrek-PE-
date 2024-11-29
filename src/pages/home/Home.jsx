@@ -10,7 +10,8 @@ import { FloatButton } from "antd";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
+
+import { faAddressBook, faMessage, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -28,7 +29,11 @@ export const Home = () => {
           <PropertyList />
           <h2 className="homeTitle">Peoples Favorite</h2>
           <FeaturedProperties />
-          <FloatButton icon={<FontAwesomeIcon icon={faBars} />}/>
+          <FloatButton.Group icon={<FontAwesomeIcon icon={faPlus}/>} trigger="click">
+          <FloatButton icon={<FontAwesomeIcon icon={faMessage}/>} tooltip="Contact us"/>
+          <FloatButton icon={<FontAwesomeIcon icon={faAddressBook}/>} tooltip="Your Account"/>
+          
+          </FloatButton.Group>
           <Subscribe />
           <Footer />
         </div>

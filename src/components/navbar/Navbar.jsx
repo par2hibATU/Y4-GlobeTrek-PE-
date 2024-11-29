@@ -4,10 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBed,
   faCar,
+  faLocation,
   faPlane,
   faTaxi,
 } from "@fortawesome/free-solid-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
 
 
 export const Navbar = () => {
@@ -45,8 +46,8 @@ export const Navbar = () => {
               <span>Airport Taxis</span>
             </div>
             <div className="navbarListItem">
-              <FontAwesomeIcon icon={faEnvelope} />
-              <span>Contact Us</span>
+              <FontAwesomeIcon icon={faLocation} />
+              <span>Your location</span>
             </div>
           </div>
         </div>
