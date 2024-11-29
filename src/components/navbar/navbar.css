@@ -18,8 +18,13 @@
     align-items: center;
     justify-content: space-between;
 
+}
 
-
+.hamburger{
+    position: static; /* Position the hamburger icon */
+    
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .logo{

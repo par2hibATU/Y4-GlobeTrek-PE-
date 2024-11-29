@@ -9,9 +9,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
+
 export const Navbar = () => {
   return (
     <div className="navbar">
+
       <div className="navContainer">
         <span className="logo">GlobeTrek</span>
         <div className="navbarRegisterItems">
