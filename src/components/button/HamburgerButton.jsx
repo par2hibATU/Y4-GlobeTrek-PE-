@@ -1,5 +1,5 @@
 import "./hamburgerButton.css";
-import React, { useState, handleMapClick } from "react";
+import React, { useState, handleMapClick, handleMapClick2 } from "react";
 import { useNavigate } from "react-router-dom";
 import { FloatButton } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,6 +13,10 @@ export const HamburgerButton = () => {
   const handleMapClick = () => {
     navigate("/map"); // Navigate to the map page
   };
+
+  const handleMapClick2 = () => {
+    navigate("/contact"); // Navigate to the map page
+  };
   return (
     <div>
 
@@ -23,6 +27,7 @@ export const HamburgerButton = () => {
         <FloatButton
           icon={<FontAwesomeIcon icon={faMessage} />}
           tooltip="Contact us"
+          onClick={handleMapClick2}
         />
         <FloatButton
           icon={<FontAwesomeIcon icon={faLocation} />}
