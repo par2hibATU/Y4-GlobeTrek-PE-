@@ -3,6 +3,8 @@ import Home from "./pages/home/Home";
 import List from "./pages/list/List";
 import Hotel from "./pages/hotel/Hotel";
 import MailList from "./pages/mailList/MailList";
+import Map from "./pages/map/Map";
+
 
 function App() {
   return (
@@ -12,6 +14,7 @@ function App() {
       <Route path = "/hotels" element = {<List />} />
       <Route path = "/hotels/:id" element = {<Hotel />} />
       <Route path="/email" element = {<MailList />} />
+      <Route path="/map" element = {<Map />} />
     </Routes>
     </BrowserRouter>
   );
