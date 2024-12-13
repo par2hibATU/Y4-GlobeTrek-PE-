@@ -1,9 +1,9 @@
 import "./hamburgerButton.css";
-import React, { useState, useNavigate, handleMapClick } from "react";
-import Hamburger from "hamburger-react";
+import React, { useState, handleMapClick } from "react";
+import { useNavigate } from "react-router-dom";
 import { FloatButton } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAddressBook, faMessage, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faLocation, faMessage, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -25,8 +25,8 @@ export const HamburgerButton = () => {
           tooltip="Contact us"
         />
         <FloatButton
-          icon={<FontAwesomeIcon icon={faAddressBook} />}
-          tooltip="Your Account"
+          icon={<FontAwesomeIcon icon={faLocation} />}
+          tooltip="Location"
           onClick={handleMapClick}
         />
       </FloatButton.Group>
