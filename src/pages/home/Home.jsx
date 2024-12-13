@@ -6,12 +6,8 @@ import PropertyList from "../../components/propertyList/PropertyList";
 import FeaturedProperties from "../../components/featuredProperties/FeaturedProperties";
 import Subscribe from "../mailList/Subscribe";
 import Footer from "../../components/footer/Footer";
-import { FloatButton } from "antd";
+import HamburgerButton from "../../components/button/HamburgerButton";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-
-import { faAddressBook, faMessage, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -29,11 +25,7 @@ export const Home = () => {
           <PropertyList />
           <h2 className="homeTitle">Peoples Favorite</h2>
           <FeaturedProperties />
-          <FloatButton.Group icon={<FontAwesomeIcon icon={faPlus}/>} trigger="click">
-          <FloatButton icon={<FontAwesomeIcon icon={faMessage}/>} tooltip="Contact us"/>
-          <FloatButton icon={<FontAwesomeIcon icon={faAddressBook}/>} tooltip="Your Account"/>
-          
-          </FloatButton.Group>
+          <HamburgerButton />
           <Subscribe />
           <Footer />
         </div>
