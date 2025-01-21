@@ -5,6 +5,7 @@ import Hotel from "./pages/hotel/Hotel";
 import MailList from "./pages/mailList/MailList";
 import Map from "./pages/map/Map";
 import Contact from "./pages/contact/Contact";
+import Weather from "./pages/weather/Weather";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path="/email" element = {<MailList />} />
       <Route path="/map" element = {<Map />} />
       <Route path="/contact" element = {<Contact />} />
+      <Route path="/weather" element = {<Weather />} />
     </Routes>
     </BrowserRouter>
   );
