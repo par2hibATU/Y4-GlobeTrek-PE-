@@ -3,7 +3,7 @@ import React, { useState, handleMapClick, handleMapClick2 } from "react";
 import { useNavigate } from "react-router-dom";
 import { FloatButton } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocation, faMessage, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faCloud, faLocation, faMessage, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -15,6 +15,9 @@ export const HamburgerButton = () => {
   };
 
   const handleMapClick2 = () => {
+    navigate("/contact"); // Navigate to the map page
+  };
+  const handleMapClick3 = () => {
     navigate("/contact"); // Navigate to the map page
   };
   return (
@@ -33,6 +36,11 @@ export const HamburgerButton = () => {
           icon={<FontAwesomeIcon icon={faLocation} />}
           tooltip="Location"
           onClick={handleMapClick}
+        />
+        <FloatButton
+          icon={<FontAwesomeIcon icon={faCloud} />}
+          tooltip="Weather"
+          onClick={handleMapClick3}
         />
       </FloatButton.Group>
     </div>
