@@ -13,12 +13,15 @@ import { DateRange } from "react-date-range";
 import { format, addDays, isWeekend } from "date-fns";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
+import { useNavigate } from "react-router-dom";
 
 
 
 export const Header = ({ type }) => {
   //to hide the calender at the opening
   const [openDate, setOpenDate] = useState(false);
+
+  const [destination, setDestination] = useState("");
 
   //to set the dates
   const [state, setState] = useState({
@@ -50,6 +53,8 @@ export const Header = ({ type }) => {
     });
   };
 
+  const navigate = useNavigate()
+
   const customDayContent = (day) => {
     let extraDot = null;
     if (isWeekend(day)) {
@@ -75,6 +80,10 @@ export const Header = ({ type }) => {
     );
   };
 
+  const handleSearch = () => {
+    navigate("/hotels", {state:{}})
+
+  }
   
   ///If div is list, then headerContainer listMode will be triggered otherwise headerContainer will be triggered */
   return (
@@ -101,6 +110,7 @@ export const Header = ({ type }) => {
                   type="text"
                   placeholder="Where are you going?"
                   className="headerSearchInput"
+                  onChange={(e) => setDestination(e.target.value)}
                 />
               </div>
               <div className="headerSearchItem">
@@ -201,7 +211,7 @@ export const Header = ({ type }) => {
                 )}
               </div>
               <div className="headerSearchItem">
-                <button className="headerBtn">Search</button>
+                <button className="headerBtn" onClick={handleSearch}>Search</button>
               </div>
             </div>
           </>
