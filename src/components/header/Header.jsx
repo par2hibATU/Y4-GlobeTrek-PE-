@@ -81,7 +81,7 @@ export const Header = ({ type }) => {
   };
 
   const handleSearch = () => {
-    navigate("/hotels", {state:{}})
+    navigate("/hotels", {state:{destination, date, options}})
 
   }
   

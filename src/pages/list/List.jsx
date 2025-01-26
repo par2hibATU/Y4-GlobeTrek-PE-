@@ -3,10 +3,13 @@ import Navbar from '../../components/navbar/Navbar';
 import "./list.css"
 import Footer from '../../components/footer/Footer'
 import Subscribe from '../mailList/Subscribe';
+import { useLocation } from 'react-router-dom';
 
 
 
 export const List = () => {
+  const location = useLocation()
+
   return (
     <div><Navbar type = "list"/>
     <div className="listContainer">
