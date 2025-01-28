@@ -24,18 +24,13 @@ export const Header = ({ type }) => {
   const [destination, setDestination] = useState("");
 
   //to set the dates
-  const [date, setDate] = useState({
-    selection1: {
-      startDate: addDays(new Date(), -6),
+  const [date, setDate] = useState([
+    {
+      startDate: new Date(),
       endDate: new Date(),
-      key: "selection1",
+      key: "selection",
     },
-    selection2: {
-      startDate: addDays(new Date(), 1),
-      endDate: addDays(new Date(), 7),
-      key: "selection2",
-    },
-  });
+  ]);
 
   const [openOptions, setOpenOptions] = useState(false);
   const [options, setOptions] = useState({
@@ -114,25 +109,22 @@ export const Header = ({ type }) => {
                 />
               </div>
               <div className="headerSearchItem">
-                <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
+              <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
                 <span
                   onClick={() => setOpenDate(!openDate)}
                   className="headerSearchText"
-                >{`${format(date.selection1.startDate, "MM/dd/yyyy")} to ${format(
-                  date.selection2.endDate,
+                >{`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(
+                  date[0].endDate,
                   "MM/dd/yyyy"
                 )}`}</span>
-
                 {openDate && (
                   <DateRange
-                  onChange={(item) => setDate({ ...date, ...item })}
-                  showSelectionPreview={true}
-                  moveRangeOnFirstSelection={false}
-                  months={2}
-                  ranges={[date.selection1, date.selection2]}
-                  direction="horizontal"
-                  dayContentRenderer={customDayContent}
-                  className="date"
+                    editableDateInputs={true}
+                    onChange={(item) => setDate([item.selection])}
+                    moveRangeOnFirstSelection={false}
+                    ranges={date}
+                    className="date"
+                    minDate={new Date()}
                   />
                 )}
               </div>
