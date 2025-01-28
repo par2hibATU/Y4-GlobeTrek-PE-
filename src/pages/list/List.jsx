@@ -43,4 +43,3 @@ export const List = () => {
 
 export default List;
 
-/*Timestamp at 1:09:15*/ 
