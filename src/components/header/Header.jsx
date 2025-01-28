@@ -24,7 +24,7 @@ export const Header = ({ type }) => {
   const [destination, setDestination] = useState("");
 
   //to set the dates
-  const [state, setState] = useState({
+  const [date, setDate] = useState({
     selection1: {
       startDate: addDays(new Date(), -6),
       endDate: new Date(),
@@ -118,18 +118,18 @@ export const Header = ({ type }) => {
                 <span
                   onClick={() => setOpenDate(!openDate)}
                   className="headerSearchText"
-                >{`${format(state.selection1.startDate, "MM/dd/yyyy")} to ${format(
-                  state.selection2.endDate,
+                >{`${format(date.selection1.startDate, "MM/dd/yyyy")} to ${format(
+                  date.selection2.endDate,
                   "MM/dd/yyyy"
                 )}`}</span>
 
                 {openDate && (
                   <DateRange
-                  onChange={(item) => setState({ ...state, ...item })}
+                  onChange={(item) => setDate({ ...date, ...item })}
                   showSelectionPreview={true}
                   moveRangeOnFirstSelection={false}
                   months={2}
-                  ranges={[state.selection1, state.selection2]}
+                  ranges={[date.selection1, date.selection2]}
                   direction="horizontal"
                   dayContentRenderer={customDayContent}
                   className="date"
