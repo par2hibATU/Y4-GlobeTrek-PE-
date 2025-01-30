@@ -47,15 +47,15 @@ export const List = () => {
             </div>
             <div className="lsOptionItem">
               <span className="lsOptionText">Adult</span>
-              <input type='number' className='lsOptionInput'/>
+              <input type='number' min={1} className='lsOptionInput' placeholder={options.adult}/>
             </div>
             <div className="lsOptionItem">
               <span className="lsOptionText">Children</span>
-              <input type='number' className='lsOptionInput'/>
+              <input type='number' min={0} className='lsOptionInput' placeholder={options.children}/>
             </div>
             <div className="lsOptionItem">
               <span className="lsOptionText">room</span>
-              <input type='number' className='lsOptionInput'/>
+              <input type='number' min={1} className='lsOptionInput' placeholder={options.room}/>
             </div>
           </div>
         </div>
