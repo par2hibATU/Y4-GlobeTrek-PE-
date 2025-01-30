@@ -1,0 +1,42 @@
+.searchItem{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.siImg{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.siDesc{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 2;
+}
+/*This Flex decides the width*/
+
+.siDetails{
+    flex: 1;
+}
+
+.siTitle{
+    font-size: 20px;
+    color: #0071c2;
+}
+
+.siDistance{
+    font-size: 12px;
+}
+
+.siTaxiOp{
+    font-size: 12px;
+    background-color: #008009;
+    color: white;
+    width: max-content;
+}
