@@ -13,7 +13,7 @@
 
 .listSearch{
     flex: 1;
-    background-color: #1e962a;
+    background-color: #c8c208;
     padding: 10px;
     border-radius: 10px;
     position: sticky;
@@ -21,6 +21,10 @@
     height: max-content;
 }
 /* position is sticky cause I want to keep the search box stick to the top when user will scroll down the page */
+
+.lsOptions{
+    padding: 10px;
+}
 
 .lsTitle{
     font-size: 20px;
@@ -58,3 +62,26 @@
     align-items: center;
     cursor: pointer;
 }
+
+.lsOptionItem{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    font-size: 15px;
+}
+
+.lsOptionInput{
+    width: 50px;
+}
+
+.listSearch>button{
+    padding: 10px;
+    background-color: #0071c2;
+    color: white;
+    border: none;
+    width: 100%;
+    font-weight: 500;
+    cursor: pointer;
+}
+
