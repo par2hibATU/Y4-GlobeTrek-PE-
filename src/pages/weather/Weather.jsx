@@ -45,6 +45,7 @@ function Map() {
   }, [])
 
   // Fetch weather data for a specific location
+  //metric means the temperature will be in celcius, wind speed in meters per second. imperial means in Fahrenheit and miles per hour.
   const fetchWeather = async (location) => {
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.lng}&appid=${weatherApiKey}&units=metric`
     try {
