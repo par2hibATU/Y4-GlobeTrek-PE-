@@ -14,7 +14,17 @@ export const SearchItem = () => {
             <span className="siCancelOp">Free Cancellation</span>
             <span className="siCancelOpSubtitle">Lock your Room today. Great price! Great Ambience! Great Chance!</span>
         </div>
-        <div className="siDetails">Details</div>
+        <div className="siDetails">
+          <div className="siRating">
+            <span>Excellent</span>
+            <button>8.9</button>
+          </div>
+          <div className="siDetailsTexts">
+            <span className="siPrice">£70</span>
+            <span className="siTaxOp">Includes taxes and fees</span>
+            <button className="siCheckButton">See availability</button>
+          </div>
+        </div>
     </div>
   )
 }
