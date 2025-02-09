@@ -141,3 +141,19 @@
     width: 80%;
     height: 80vh;
 }
+
+.close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: lightcyan;
+    cursor: pointer;
+}
+
+.arrow{
+    margin: 20px;
+    font-size: 40px;
+    color: lightsteelblue;
+    cursor: pointer;
+}
