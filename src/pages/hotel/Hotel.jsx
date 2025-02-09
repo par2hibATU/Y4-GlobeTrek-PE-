@@ -45,7 +45,21 @@ export const Hotel = () => {
                 <img src={photo.src} alt="" className='hotelImg'/>
               </div>
             ))}
-
+          </div>
+          <div className="hotelDetails">
+            <div className="hotelDetailsTexts">
+              <h1 className='hotelTitle'>Stay in heart of Galway</h1>
+              <p className='hotelDesc'>
+              Fabulous is your natural habitat. Swaddled in five-star luxury. 
+            Surrounded by exhilarating design. Steps away from a spirited city, where something wonderful waits around every corner. 
+            Everything you see has been chosen to make you smile. Everyone you meet is waiting to make your day. 
+            Whatever you were doing yesterday, today you’re a VIP. Because today, you’re at The g. For us, five stars has never been about formality. 
+            We know the greatest luxury is getting to be yourself. In all your glory. We could go on and on (and on) about what a special hotel this is. 
+              </p>
+            </div>
+            <div className="hotelDetailsPrice">
+              
+            </div>
           </div>
         </div>
       </div>
