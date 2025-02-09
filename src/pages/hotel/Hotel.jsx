@@ -7,6 +7,11 @@ export const Hotel = () => {
   return (
     <div>
       <Navbar/>
+      <div className="hotelContainer">
+        <div className="hotelWrapper">
+          <h1 className='hotelTitle'>Grand Hotel</h1>
+        </div>
+      </div>
       <Footer/>
     </div>
   )
