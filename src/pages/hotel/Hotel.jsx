@@ -70,7 +70,7 @@ export const Hotel = () => {
               You can call us any time at +353 91 865200, or drop us a line
               </span>
               <h2>
-                <b>$945</b> (9 nights)
+                <b>£75</b> (9 nights)
               </h2>
               <button>Reserve or Book now!</button>
             </div>
