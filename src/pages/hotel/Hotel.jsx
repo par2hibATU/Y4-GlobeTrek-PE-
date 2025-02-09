@@ -4,6 +4,7 @@ import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import Subscribe from '../mailList/Subscribe';
 
 export const Hotel = () => {
   const photos = [
@@ -58,11 +59,21 @@ export const Hotel = () => {
               </p>
             </div>
             <div className="hotelDetailsPrice">
-              
+              <h1>Perfect for a 9-night stay!</h1>
+              <span>
+              The g Hotel & Spa is in Galway, perched on the edge of Lough Atalia as you enter the heart of Galway City. 
+              If you need anything (anything at all) just reach out. 
+              You can call us any time at +353 91 865200, or drop us a line
+              </span>
+              <h2>
+                <b>$945</b> (9 nights)
+              </h2>
+              <button>Reserve or Book now!</button>
             </div>
           </div>
         </div>
       </div>
+      <Subscribe/>
       <Footer/>
     </div>
   )
