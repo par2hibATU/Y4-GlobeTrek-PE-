@@ -1,36 +1,62 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./hotel.css"
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faCircleArrowLeft, faCircleArrowRight, faCircleXmark, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import Subscribe from '../mailList/Subscribe';
+import { text } from '@fortawesome/fontawesome-svg-core';
 
 export const Hotel = () => {
+  const [slideNumber, setSlideNumber] = useState(0);
+  const [open, setOpen] = useState(false);
   const photos = [
     {
-      src: "https://th.bing.com/th/id/OIP.gtAhMVjnZnArpv_yZ9Xk0gHaEK?w=306&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7"
+      src: "https://www.theghotel.ie/wp-content/uploads/2019/11/exterior-13-1024x576.jpg"
     },
     {
-      src: "https://th.bing.com/th/id/OIP.P54WapiK-ZlpdUas5eoxVAHaEK?w=306&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7"
-    },
-    {
-      src: "https://www.theghotel.ie/wp-content/uploads/2020/01/Junior-Suite-1440x720-fpoff__.jpg"
+      src: "https://www.theghotel.ie/wp-content/uploads/2020/09/Luxury-Room-1920x1080-fp_mm-fpoff_0_0.jpg"
     },
     {
       src: "https://www.theghotel.ie/wp-content/uploads/2021/09/The-Atrium-Suite-1440x720-fpoff__.jpg"
+      
     },
     {
-      src: "https://www.theghotel.ie/wp-content/uploads/2019/11/linda-evangelist-suite-02-1440x720-fpoff__.jpg"
+      src: "https://www.theghotel.ie/wp-content/uploads/2019/11/linda-evabgelista-bathroom-gallery-01-959x1024.jpg"
     },
     {
-      src: "https://www.theghotel.ie/wp-content/uploads/2020/09/Superior-Room-1440x720-fpoff__.jpg"
+      src: "https://www.theghotel.ie/wp-content/uploads/2023/04/gRoom12-1024x683.jpg"
+    },
+    {
+      src: "https://www.theghotel.ie/wp-content/uploads/2023/04/ghotelinteriorSession8756_HDR3-1024x683.jpg"
     }
   ]
+const handleOpen = (i)=>{
+  setSlideNumber(i);
+  setOpen(true);
+} 
+const handleMove = (direction) =>{
+  let newSlideNumber;
+  if(direction=='l'){
+    newSlideNumber = slideNumber === 0 ? 5 : slideNumber - 1;
+  }else{
+    newSlideNumber = slideNumber === 5 ? 0 : slideNumber + 1;
+  }
+  setSlideNumber(newSlideNumber)
+};
+
   return (
     <div>
       <Navbar/>
       <div className="hotelContainer">
+        {open && <div className="slider">
+          <FontAwesomeIcon icon={faCircleXmark} className='close' onClick={()=>setOpen(false)}/>
+          <FontAwesomeIcon icon={faCircleArrowLeft} className='arrow' onClick={()=>handleMove("l")}/>
+          <div className="sliderWrapper">
+            <img src={photos[slideNumber].src} alt="" className='sliderImg'/>
+          </div>
+          <FontAwesomeIcon icon={faCircleArrowRight} className='arrow' onClick={()=>handleMove("r")}/>
+        </div>}
         <div className="hotelWrapper">
           <button className='bookNow'>Reserve or Book Now!</button>
           <h1 className='hotelTitle'>Grand Hotel</h1>
@@ -45,9 +71,9 @@ export const Hotel = () => {
             Book your spot over £75 and Experience the absolute comfort. Get a free coach station Taxi pickup
           </span>
           <div className="hotelImages">
-            {photos.map(photo=>(
+            {photos.map((photo, i) =>(
               <div className="hotelImgWrapper">
-                <img src={photo.src} alt="" className='hotelImg'/>
+                <img onClick={()=>handleOpen(i)} src={photo.src} alt="" className='hotelImg'/>
               </div>
             ))}
           </div>
