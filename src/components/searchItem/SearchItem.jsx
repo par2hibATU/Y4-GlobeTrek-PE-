@@ -7,7 +7,7 @@ export const SearchItem = () => {
         alt="" className="siImg" />
         <div className="siDesc">
             <h1 className="siTitle">The Galway Hotel</h1>
-            <span className="siDistance">0.9km from center</span>
+            <span className="siDistance">0.9 km from center</span>
             <span className="siTaxiOp">Free Taxi pickup from Coach Station</span>
             <span className="siSubtitle">Free continental breakfast and Wifi connection</span>
             <span className="siFeatures">Full kind size bedroom with well furnised marbel Floor apartment</span>
