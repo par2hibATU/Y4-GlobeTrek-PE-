@@ -19,6 +19,7 @@
     position: sticky;
     top: 10px;
     height: max-content;
+    
 }
 /* position is sticky cause I want to keep the search box stick to the top when user will scroll down the page */
 
