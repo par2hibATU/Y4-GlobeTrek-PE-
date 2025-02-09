@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./hotel.css"
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faCircleArrowLeft, faCircleArrowRight, faCircleXmark, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import Subscribe from '../mailList/Subscribe';
 
 export const Hotel = () => {
+  const [slideNumber, setSlideNumber] = useState(0);
+  const [open, setOpen] = useState(false);
   const photos = [
     {
       src: "https://th.bing.com/th/id/OIP.gtAhMVjnZnArpv_yZ9Xk0gHaEK?w=306&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7"
@@ -27,10 +29,23 @@ export const Hotel = () => {
       src: "https://www.theghotel.ie/wp-content/uploads/2020/09/Superior-Room-1440x720-fpoff__.jpg"
     }
   ]
+const handleOpen = (i)=>{
+  setSlideNumber(i);
+  setOpen(true);
+} 
+
   return (
     <div>
       <Navbar/>
       <div className="hotelContainer">
+        {open && <div className="slider">
+          <FontAwesomeIcon icon={faCircleXmark}/>
+          <FontAwesomeIcon icon={faCircleArrowLeft}/>
+          <div className="sliderWrapper">
+            <img src={photos[slideNumber].src} alt="" className='sliderImg'/>
+          </div>
+          <FontAwesomeIcon icon={faCircleArrowRight}/>
+        </div>}
         <div className="hotelWrapper">
           <button className='bookNow'>Reserve or Book Now!</button>
           <h1 className='hotelTitle'>Grand Hotel</h1>
@@ -45,9 +60,9 @@ export const Hotel = () => {
             Book your spot over £75 and Experience the absolute comfort. Get a free coach station Taxi pickup
           </span>
           <div className="hotelImages">
-            {photos.map(photo=>(
+            {photos.map((photo, i) =>(
               <div className="hotelImgWrapper">
-                <img src={photo.src} alt="" className='hotelImg'/>
+                <img onClick={()=>handleOpen(i)} src={photo.src} alt="" className='hotelImg'/>
               </div>
             ))}
           </div>
